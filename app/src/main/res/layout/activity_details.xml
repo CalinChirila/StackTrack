@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context="com.example.android.stacktrack.DetailsActivity">
+
+    <!-- Product name user input -->
+    <LinearLayout style="@style/HorizontalLayoutStyle">
+
+        <TextView
+            style="@style/DetailNameStyle"
+            android:text="@string/product_name" />
+
+        <EditText
+            android:id="@+id/product_name_edit_text"
+            style="@style/DetailValueStyle"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <!-- Product price user input-->
+    <LinearLayout style="@style/HorizontalLayoutStyle">
+
+        <TextView
+            style="@style/DetailNameStyle"
+            android:text="@string/price" />
+
+        <EditText
+            android:id="@+id/product_price_edit_text"
+            style="@style/DetailValueStyle"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <!-- Product quantity user input-->
+    <LinearLayout
+        style="@style/HorizontalLayoutStyle"
+        android:layout_width="wrap_content">
+
+        <TextView
+            style="@style/DetailNameStyle"
+            android:text="@string/quantity" />
+
+        <Button
+            android:id="@+id/decrement_quantity_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantity_detail_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textSize="24sp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/increment_quantity_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Product supplier user input-->
+    <LinearLayout style="@style/HorizontalLayoutStyle">
+
+        <TextView
+            style="@style/DetailNameStyle"
+            android:text="@string/supplier" />
+
+        <EditText
+            android:id="@+id/product_supplier_edit_text"
+            style="@style/DetailValueStyle"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <!--Supplier email user input-->
+    <LinearLayout style="@style/HorizontalLayoutStyle">
+
+        <TextView
+            style="@style/DetailNameStyle"
+            android:text="@string/supplier_email" />
+
+        <EditText
+            android:id="@+id/product_supplier_email_edit_text"
+            style="@style/DetailValueStyle"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <!-- The product picture-->
+    <LinearLayout style="@style/HorizontalLayoutStyle">
+
+        <TextView
+            style="@style/DetailNameStyle"
+            android:layout_gravity="center"
+            android:text="@string/product_picture" />
+
+        <ImageView
+            android:id="@+id/add_image_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_camera_alt"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="20dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/order" />
+
+
+</LinearLayout>
